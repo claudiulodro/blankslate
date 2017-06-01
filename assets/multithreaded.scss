@@ -1,0 +1,35 @@
+$site_bg: #FFFFFF;
+$content_bg: #DDDDDD;
+$content_bg_dark: #666666;
+$text_color: #333333;
+$text_color_dark: #111111;
+$link_color: blue;
+
+$site_width: 900px;
+
+$margin_s: 1em;
+$margin_m: 2em;
+$margin_l: 3em;
+
+html, body {
+	background-color: $site_bg;
+	color: $text_color;
+}
+
+h1, h2, h3 {
+	color: $text_color_dark;
+}
+
+#wrapper {
+	background-color: $content_bg;
+	max-width: $site_width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: $margin_m;
+}
+
+#header {
+	background-color: $content_bg_dark;
+	padding: $margin_s;
+}
