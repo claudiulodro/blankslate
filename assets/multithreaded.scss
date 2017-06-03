@@ -1,31 +1,19 @@
-$scheme_1_dark : #928d9d;
-$scheme_1_light : #c6c3ce;
-$scheme_1_bg : #e5e1cb;
-
-$scheme_2_dark : #9f9bad;
-$scheme_2_light : #f4f2ff;
-$scheme_2_bg : #fbf5dd;
-
-$scheme_3_dark : #9da5a0;
-$scheme_3_light : #ccd2cf;
-$scheme_3_bg : #e6dcda;
-
 $site_width : 900px;
 
 $margin_s : 1em;
 $margin_m : 2em;
 $margin_l : 3em;
 
-$text_color : #000000;
-$link_color : $scheme_1_dark;
+$text_color : #4a4a4a;
+$link_color : green;
 
 $site_bg: #FFFFFF;
-$content_bg: $scheme_1_bg;
-$content_bg_dark: $scheme_1_light;
-$logo_color: $scheme_1_dark;
-$text_color: #333333;
-$text_color_dark: #111111;
-$link_color: blue;
+$content_bg: #dedede;
+$content_bg_dark: #a0a0a0;
+$logo_color: #FFFFFF;
+$text_color: #464646;
+$text_color_dark: #8e3b3d;
+$link_color: #8e3b3d;
 
 $site_width: 900px;
 
@@ -37,19 +25,30 @@ html, body {
 	background-color: $site_bg;
 	color: $text_color;
 	font-size: 17px;
+	font-family: 'Inconsolata', monospace;
 }
 
 h1, h2, h3 {
-	color: $text_color_dark;
+	color: $link_color;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: .5em;
+	margin-bottom: .2em;
+	line-height: 1.2;
 }
 
 a {
 	text-decoration: none;
-	color: $logo_color;
+	color: $link_color;
 
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+p {
+	line-height: 1.4;
 }
 
 #wrapper {
@@ -58,10 +57,13 @@ a {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 #container {
 	padding: $margin_m;
+	padding-top: $margin_s;
 }
 
 #header {
@@ -72,8 +74,9 @@ a {
 	#branding {
 		float: left;
 		margin-bottom: $margin_s;
-		font-size: 1.2em;
-
+		margin-top: -.25em;
+		font-size: 2em;
+		font-family: 'Francois One', sans-serif;
 		a:hover {
 			text-decoration: none;
 		}
@@ -90,11 +93,13 @@ a {
 	}
 }
 
-h1 {
+article {
+	margin-bottom: $margin_m;
+}
+
+.comments-title {
+	color: $link_color;
 	font-weight: bold;
-	font-size: 1.5em;
-	margin-top: .5em;
-	margin-bottom: .5em;
 }
 
 .entry-content {
@@ -108,6 +113,11 @@ h1 {
 
 .entry-meta {
 	margin-bottom: $margin_s;
+	font-size: .75em;
+}
+
+.entry-footer {
+	font-size: .75em;
 }
 
 .comment-form-comment {
@@ -136,6 +146,23 @@ h1 {
 		.comment-form-comment {
 			margin-top: $margin_s;
 		}
+	}
+
+	.comment-author, .comment-meta {
+		display: inline;
+		font-size: .75em;
+		border-bottom: 1px solid $text_color;
+	}
+
+	.comment-meta {
+		padding-left: .25em;
+		a {
+			color: $text_color;
+		}
+	}
+
+	p :first-of-type {
+		margin-top: $margin_m;
 	}
 
 	.reply {

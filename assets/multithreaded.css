@@ -1,35 +1,50 @@
 html, body {
   background-color: #FFFFFF;
-  color: #333333;
-  font-size: 17px; }
+  color: #464646;
+  font-size: 17px;
+  font-family: 'Inconsolata', monospace; }
 
 h1, h2, h3 {
-  color: #111111; }
+  color: #8e3b3d;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: .5em;
+  margin-bottom: .2em;
+  line-height: 1.2; }
 
 a {
   text-decoration: none;
-  color: #928d9d; }
+  color: #8e3b3d; }
   a:hover {
     text-decoration: underline; }
 
+p {
+  line-height: 1.4; }
+
 #wrapper {
-  background-color: #e5e1cb;
+  background-color: #dedede;
   max-width: 900px;
   width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em; }
 
 #container {
-  padding: 2em; }
+  padding: 2em;
+  padding-top: 1em; }
 
 #header {
-  background-color: #c6c3ce;
+  background-color: #a0a0a0;
   padding: 1em;
   height: 1em; }
   #header #branding {
     float: left;
     margin-bottom: 1em;
-    font-size: 1.2em; }
+    margin-top: -.25em;
+    font-size: 2em;
+    font-family: 'Francois One', sans-serif; }
     #header #branding a:hover {
       text-decoration: none; }
   #header li {
@@ -37,13 +52,14 @@ a {
     margin-bottom: 1em;
     margin-left: 1em; }
   #header a {
-    color: #928d9d; }
+    color: #FFFFFF; }
 
-h1 {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-top: .5em;
-  margin-bottom: .5em; }
+article {
+  margin-bottom: 2em; }
+
+.comments-title {
+  color: #8e3b3d;
+  font-weight: bold; }
 
 .entry-content {
   margin-top: 1em;
@@ -52,7 +68,11 @@ h1 {
     margin-bottom: 1em; }
 
 .entry-meta {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-size: .75em; }
+
+.entry-footer {
+  font-size: .75em; }
 
 .comment-form-comment label {
   display: block; }
@@ -69,6 +89,16 @@ h1 {
   display: block; }
   #comments-list li .comment-form-comment {
     margin-top: 1em; }
+#comments-list .comment-author, #comments-list .comment-meta {
+  display: inline;
+  font-size: .75em;
+  border-bottom: 1px solid #464646; }
+#comments-list .comment-meta {
+  padding-left: .25em; }
+  #comments-list .comment-meta a {
+    color: #464646; }
+#comments-list p :first-of-type {
+  margin-top: 2em; }
 #comments-list .reply {
   margin-bottom: 1em; }
 #comments-list .depth-1 {
