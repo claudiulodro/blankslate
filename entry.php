@@ -12,6 +12,7 @@
 		<?php endif ?>
 
 	</header>
+	<?php if ( !is_search() ) get_template_part( 'entry', 'meta' ); ?>
 
 	<?php 
 	if ( is_singular() ):
@@ -20,8 +21,6 @@
 		get_template_part( 'entry', 'summary' );
 	endif;
 	?>
-
-	<?php if ( !is_search() ) get_template_part( 'entry', 'meta' ); ?>
 
 	<?php if ( is_singular() ): get_template_part( 'entry-footer' ); endif; ?>
 </article>

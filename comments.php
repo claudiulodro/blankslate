@@ -1,6 +1,6 @@
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
-	<h1>Comments</h1>
+	<h1><?php comments_number(); ?></h1>
 
 	<?php 
 	if ( comments_open() ):
@@ -13,7 +13,6 @@
 		if ( ! empty( $comments_by_type['comment'] ) ) : 
 		?>
 			<section id="comments-list" class="comments">
-				<h3 class="comments-title"><?php comments_number(); ?></h3>
 				<?php if ( get_comment_pages_count() > 1 ) : ?>
 					<nav id="comments-nav-above" class="comments-navigation" role="navigation">
 						<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>

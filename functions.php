@@ -67,4 +67,11 @@ function blankslate_comments_number( $count )
 	return $count;
 }
 
+function ml_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'ml_login_logo_url' );
+
+
+
 require_once( get_template_directory() . '/lib/include.php' );
