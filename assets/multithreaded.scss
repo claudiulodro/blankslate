@@ -8,12 +8,12 @@ $text_color : #4a4a4a;
 $link_color : green;
 
 $site_bg: #FFFFFF;
-$content_bg: #dedede;
-$content_bg_dark: #a0a0a0;
-$logo_color: #FFFFFF;
+$content_bg: #FFFFFF;
+$content_bg_dark: #FFFFFF;
+$logo_color: #464646;
 $text_color: #464646;
-$text_color_dark: #8e3b3d;
-$link_color: #8e3b3d;
+$text_color_dark: #464646;
+$link_color: #0000ee;
 
 $site_width: 900px;
 
@@ -24,18 +24,21 @@ $margin_l: 3em;
 html, body {
 	background-color: $site_bg;
 	color: $text_color;
-	font-size: 17px;
+	font-size: 16px;
 	font-family: 'Inconsolata', monospace;
 }
 
 h1, h2, h3 {
-	color: $link_color;
-	font-size: 1.2em;
+	color: $text_color_dark;
+	font-size: 1em;
 	text-transform: uppercase;
-	font-weight: bold;
 	margin-top: .5em;
 	margin-bottom: .2em;
 	line-height: 1.2;
+
+	&::before, &::after {
+		content: "##";
+	}
 }
 
 a {
@@ -48,7 +51,7 @@ a {
 }
 
 p {
-	line-height: 1.4;
+	line-height: 1.2;
 }
 
 img {
@@ -82,17 +85,26 @@ article {
 	background-color: $content_bg_dark;
 	padding: $margin_s;
 	padding-left: $margin_m;
-	height: 1em;
+	height: 2em;
 
 	#branding {
-		float: left;
 		margin-bottom: $margin_s;
 		margin-top: -.25em;
-		font-size: 2em;
-		font-family: 'Francois One', sans-serif;
+		font-size: 1em;
+		font-family: 'Inconsolata', monospace;
+
 		a:hover {
 			text-decoration: none;
 		}
+
+		&::before,
+		&::after {
+			content: "======================";
+		}
+	}
+
+	#menu {
+		display: none;
 	}
 
 	li {
@@ -103,6 +115,12 @@ article {
 
 	a {
 		color: $logo_color;
+	}
+}
+
+#searchform {
+	#s {
+		border: 1px solid $text-color;
 	}
 }
 

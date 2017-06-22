@@ -1,26 +1,27 @@
 html, body {
   background-color: #FFFFFF;
   color: #464646;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'Inconsolata', monospace; }
 
 h1, h2, h3 {
-  color: #8e3b3d;
-  font-size: 1.2em;
+  color: #464646;
+  font-size: 1em;
   text-transform: uppercase;
-  font-weight: bold;
   margin-top: .5em;
   margin-bottom: .2em;
   line-height: 1.2; }
+  h1::before, h1::after, h2::before, h2::after, h3::before, h3::after {
+    content: "##"; }
 
 a {
   text-decoration: none;
-  color: #8e3b3d; }
+  color: #0000ee; }
   a:hover {
     text-decoration: underline; }
 
 p {
-  line-height: 1.4; }
+  line-height: 1.2; }
 
 img {
   max-width: 100%;
@@ -32,7 +33,7 @@ article {
   margin-bottom: 2em; }
 
 #wrapper {
-  background-color: #dedede;
+  background-color: #FFFFFF;
   max-width: 900px;
   width: 100%;
   margin-left: auto;
@@ -45,27 +46,33 @@ article {
   padding-top: 1em; }
 
 #header {
-  background-color: #a0a0a0;
+  background-color: #FFFFFF;
   padding: 1em;
   padding-left: 2em;
-  height: 1em; }
+  height: 2em; }
   #header #branding {
-    float: left;
     margin-bottom: 1em;
     margin-top: -.25em;
-    font-size: 2em;
-    font-family: 'Francois One', sans-serif; }
+    font-size: 1em;
+    font-family: 'Inconsolata', monospace; }
     #header #branding a:hover {
       text-decoration: none; }
+    #header #branding::before, #header #branding::after {
+      content: "======================"; }
+  #header #menu {
+    display: none; }
   #header li {
     float: right;
     margin-bottom: 1em;
     margin-left: 1em; }
   #header a {
-    color: #FFFFFF; }
+    color: #464646; }
+
+#searchform #s {
+  border: 1px solid #464646; }
 
 .search .entry-title, .archive .entry-title {
-  color: #a0a0a0;
+  color: #FFFFFF;
   margin-bottom: 1em; }
 
 .nav-next {
@@ -75,7 +82,7 @@ article {
 #search {
   text-align: center;
   padding-top: 1em;
-  border-top: 1px solid #a0a0a0;
+  border-top: 1px solid #FFFFFF;
   margin-left: 2em;
   margin-right: 2em;
   margin-bottom: 1em; }
@@ -99,7 +106,7 @@ article {
   font-size: .75em; }
 
 .comments-title {
-  color: #8e3b3d;
+  color: #0000ee;
   font-weight: bold;
   margin-top: .5em;
   font-size: 14px; }
@@ -162,11 +169,11 @@ article {
 .login {
   max-width: 900px;
   width: 100%;
-  background: #dedede;
+  background: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
   height: auto;
-  border-top: 3em solid #a0a0a0;
+  border-top: 3em solid #FFFFFF;
   margin-top: 2em; }
   .login h1 a {
     background: none;
@@ -184,7 +191,7 @@ article {
     box-shadow: none; }
   .login .button {
     background: none !important;
-    color: #8e3b3d !important;
+    color: #0000ee !important;
     border: none !important;
     text-shadow: none !important;
     box-shadow: none !important; }
@@ -197,7 +204,7 @@ article {
   padding-bottom: 2em; }
 
 #loginform {
-  background: #dedede;
+  background: #FFFFFF;
   box-shadow: none; }
 
 @media (max-width: 800px) {
